@@ -17,16 +17,5 @@ stages {
 					}
  				}
  		
- 	}post {
- 			always{
- 				echo "I always run"
- 			}
- 			success{
- 				echo " I am successful"
- 			}
- 			failure{
- 				echo " I  failed"
- 			}
- 		}
- 	
+ 	} 	
 }
