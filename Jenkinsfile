@@ -22,6 +22,12 @@ stages {
  		always {
  		echo 'I am awesome'
  		}
+ 		success {
+ 		echo 'I am success'
+ 		}
+ 		failure {
+ 		echo 'I am failure'
+ 		}
  
  }
 }
