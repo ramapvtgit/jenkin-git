@@ -18,4 +18,10 @@ stages {
  				}
  		
  	} 	
+ post {
+ 		always {
+ 		echo 'I am awesome'
+ 		}
+ 
+ }
 }
