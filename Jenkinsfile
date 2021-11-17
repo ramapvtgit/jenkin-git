@@ -40,7 +40,7 @@ stages {
 					steps{
 						//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
 						script{
-						dockerImage = docker.build("in28min/currency-exchange-devops:${env.BUILD_TAG}")
+						dockerImage = docker.build("ramadoc7/currency-exchange-devops:${env.BUILD_TAG}")
 						}
 					}
  				}
