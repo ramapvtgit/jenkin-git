@@ -41,17 +41,17 @@ stages {
 						//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
 						script{
 						docker.build("in28min/currency-exchange-devops:${env.BUILD_TAG}")
+						}
 					}
-				}
- 				
+ 				}
  				stage('Push Docker image') {
 					steps{
 						docker.withRegistry("","dockerhub"){
 							dockerImage.push();
 							dockerImage.push("Latest");
-						}
+							}
 						
-					}
+						}
  				}
  		
  	} 	
