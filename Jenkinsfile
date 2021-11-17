@@ -46,7 +46,7 @@ stages {
  				}
  				stage('Push Docker image') {
 					steps{
-						docker.withRegistry("","dockerhub"{
+						docker.withRegistry("","dockerhub"){
 							dockerImage.push();
 							dockerImage.push("Latest");
 						}
