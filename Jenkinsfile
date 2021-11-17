@@ -1,10 +1,16 @@
 pipeline {
-	//agent any
-	agent { docker { image 'node:17.1.0'}}
+	agent any
+	//agent { docker { image 'node:17.1.0'}}
+	environment {
+		dockerHome = tool 'Mydocker'
+		mavenHome = tool 'My-maven'
+		PATH = '$dockerHome/bin:$mavenHome/bin:$PATH'
+	}
 stages {
 	    		stage('Build') {
 					steps{
-						sh 'node --version'
+						sh 'mvn --version'
+						sh 'docker version'
 						echo "Build"
 					}
  				}
